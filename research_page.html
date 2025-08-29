@@ -292,6 +292,12 @@
 
 
         /* Responsive Design */
+
+        @media (min-width: 992px) {
+          .hero-title { margin-left: 40px; }
+        }
+
+
         @media (max-width: 768px) {
             header {
                 flex-direction: column;
@@ -329,7 +335,7 @@
                 top: auto;
                 margin-left: 16px;    /* optional: replace left offset */
               }
-            
+
               .research-icon img,
               .research-icon svg {
                 width: 100%;
@@ -337,9 +343,11 @@
                 display: block;
                 object-fit: contain;  /* ensure full icon is visible */
               }
+
             .hero-title {
-                font-size: 30px;
-            }
+                font-size: clamp(24px, 7vw, 36px);
+                margin-left: 0;
+              }
 
 
 
