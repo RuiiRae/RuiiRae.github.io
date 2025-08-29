@@ -7,8 +7,13 @@
     <link href="https://fonts.googleapis.com/css2?family=Nixie+One&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Noto+Serif:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@100;300;400;700&display=swap" rel="stylesheet">
+
     <meta name="viewport" content="width=device-width, initial-scale=1">
+
     <style>
+        html, body { overflow-x: hidden; }
+        img { max-width: 100%; height: auto; display: block; }
+
         * {
             margin: 0;
             padding: 0;
@@ -53,6 +58,7 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
+            flex-wrap: wrap;
             padding: 10px 0;
             border-bottom: 2px solid #333;
             margin-bottom: 40px;
@@ -68,6 +74,7 @@
         nav {
             display: flex;
             gap: 40px;
+            flex-wrap: wrap;
         }
 
         nav a {
@@ -317,11 +324,18 @@
 
         /* Responsive Design */
         @media (max-width: 768px) {
+
+            header {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 8px;
+            }
+
             .container { padding: 0 16px; }
-        
+
             .hero { flex-direction: column; align-items: flex-start; gap: 12px; }
             .hero-content { width: 100%; min-width: 0; }
-        
+
             .hero h1 {
               font-size: 32px;
               line-height: 1.2;
@@ -329,7 +343,7 @@
               top: 0 !important;
               white-space: normal;
             }
-        
+
             .hero-description {
               max-width: 100%;
               width: 100%;
@@ -338,24 +352,28 @@
               overflow-wrap: anywhere;
               word-break: break-word;
             }
-        
+
             .social-links { margin-left: 0 !important; gap: 10px; flex-wrap: wrap; }
-        
+
             .photo-placeholder {
                 width: 100%;
                 height: auto;            /* let height follow image */
                 top: 0 !important;
                 left: 0 !important;
                 margin-top: 8px;
-              }
-            .photo-placeholder img {
+            }
+              .photo-placeholder img {
                 width: 100%;
                 height: auto;            /* show entire image */
                 object-fit: contain;     /* no cropping */
                 object-position: center;
             }
-        
-            nav { display: flex; flex-wrap: wrap; gap: 12px; }
+
+            nav {
+                width: 100%;
+                gap: 12px 16px;   /* row gap, column gap */
+            }
+            nav a::after { display: none; }
           }
     </style>
 </head>
@@ -382,7 +400,7 @@
                             <br>
                             <br><strong>Research Interest: </strong> technology governance, cyber security, information systems, AI in business.
                             <br>
-                            <br> Feel free to reach me out at rui.cao@sauder.ubc.ca. I will be attending CIST 2025 and ICIS 2025.
+                            <br> Feel free to reach me out at rui.cao@sauder.ubc.ca. I will be attending CIST 2025 and ICIS 2025. 
                         </p>
 
                         <div class="social-links" style="display: flex; align-items: center; gap: 10px; margin-left: 440px;">
