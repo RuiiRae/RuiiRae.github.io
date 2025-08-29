@@ -362,22 +362,26 @@
 
             .photo-placeholder {
                 width: 60%;
-                height: auto;            /* let height follow image */
+                height: auto;
+                margin: 8px auto 0; 
+                display: block;
+                position: static;  
+                left: auto !important;
+                right: auto !important;
                 top: 0 !important;
-                left: 0 !important;
-                margin-top: 8px;
-            }
+                align-self: center; 
+              }
             
             .photo-placeholder img {
                 width: 100%;
-                height: auto;            /* show entire image */
-                object-fit: contain;     /* no cropping */
+                height: auto;        
+                object-fit: contain;  
                 object-position: center;
             }
 
             nav {
                 width: 100%;
-                gap: 12px 16px;   /* row gap, column gap */
+                gap: 12px 16px;
             }
             nav a::after { display: none; }
           }
@@ -404,7 +408,7 @@
                         <p class="hero-description">
                             Hi! I am Rui (/reɪ/). I am a Ph.D. candidate in Management Information Systems at Sauder School of Business, University of British Columbia. I will be on job market in Fall 2025. 
                             <br>
-                            <br><strong>Research Interest: </strong> technology governance, cyber security, information systems, AI in business.
+                            <br><strong>Research Interest: </strong> Technology governance, cyber security, information systems, AI in business.
                             <br>
                             <br> Feel free to reach me out at rui.cao@sauder.ubc.ca. I will be attending CIST 2025 and ICIS 2025. 
                         </p>
